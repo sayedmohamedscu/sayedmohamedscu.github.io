@@ -119,7 +119,7 @@ const skillGroups = [
 const experiences = [
   {
     role: "Senior Artificial Intelligence Engineer",
-    company: "PaxeraHealth · Boston (Remote)",
+    company: "PaxeraHealth · ",
     period: "Nov 2023 – Present",
     summary:
       "Leading medical imaging AI initiatives, deploying multimodal LLM/VLM solutions, and operationalizing cloud-native inference.",
@@ -305,6 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSocials();
   setYear();
 });
+
 
 
 
