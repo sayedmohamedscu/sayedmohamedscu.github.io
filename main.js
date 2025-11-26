@@ -188,7 +188,7 @@ const research = [
     title: "Research Assistant · WiFi Sensing (Cairo University)",
     period: "Mar 2023 – Jul 2023",
     details: [
-      "Explored deep learning techniques for WiFi sensing applications with Dr. Tawfik Ismail.",
+      "Explored deep learning techniques for WiFi sensing applications .",
       "Investigated multimodal fusion between RF signals and computer vision heuristics."
     ]
   }
@@ -305,4 +305,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSocials();
   setYear();
 });
+
 
