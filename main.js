@@ -160,7 +160,7 @@ const experiences = [
     ]
   },
   {
-    role: "Machine Learning Engineer & Co-founder",
+    role: "Machine Learning Engineer",
     company: "Pxivision",
     period: "Dec 2020 – Apr 2022",
     summary:
@@ -305,5 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSocials();
   setYear();
 });
+
 
 
