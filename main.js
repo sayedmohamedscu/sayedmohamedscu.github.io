@@ -52,7 +52,7 @@ const skillGroups = [
     ]
   },
   {
-    title: "Generative & Multimodal",
+    title: "Generative/Foundational & Multimodal",
     items: [
       "DINO v1-v3",
       "CLIP/SigLIP",
@@ -305,6 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSocials();
   setYear();
 });
+
 
 
 
