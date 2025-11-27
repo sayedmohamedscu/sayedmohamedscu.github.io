@@ -1,8 +1,8 @@
 const metrics = [
-  { value: "5+", label: "years deploying AI systems" },
-  { value: "30+", label: "production models shipped" },
-  { value: "sub‑1s", label: "3D medical inference latency" },
-  { value: "∞", label: "curiosity for applied research" }
+  { value: "6", label: "companies partnered with" },
+  { value: "16", label: "private contracts delivered" },
+  { value: "5+", label: "years of hands-on experience" },
+  { value: "8", label: "talks & sessions facilitated" }
 ];
 
 const focusAreas = [
@@ -201,6 +201,8 @@ const socials = [
   { label: "Hugging Face", url: "https://huggingface.co/_sayedmohamed" }
 ];
 
+const heroSocialPriority = ["GitHub", "Medium"];
+
 const renderMetrics = () => {
   const dl = document.getElementById("metric-cards");
   if (!dl) return;
@@ -291,6 +293,22 @@ const renderSocials = () => {
   });
 };
 
+const renderHeroSocials = () => {
+  const container = document.getElementById("hero-socials");
+  if (!container) return;
+  heroSocialPriority
+    .map((label) => socials.find((social) => social.label === label))
+    .filter(Boolean)
+    .forEach(({ label, url }) => {
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = label;
+      container.append(link);
+    });
+};
+
 const setYear = () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -302,6 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSkills();
   renderExperience();
   renderResearch();
+  renderHeroSocials();
   renderSocials();
   setYear();
 });
