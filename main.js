@@ -195,13 +195,29 @@ const research = [
 ];
 
 const socials = [
-  { label: "GitHub", url: "https://github.com/sayedmohamedscu" },
-  { label: "LinkedIn", url: "https://www.linkedin.com/in/sayedmohamedscu" },
-  { label: "Medium", url: "https://medium.com/@_sayedmohamed" },
-  { label: "Hugging Face", url: "https://huggingface.co/_sayedmohamed" }
+  {
+    label: "GitHub",
+    url: "https://github.com/sayedmohamedscu",
+    icon: "🐙"
+  },
+  {
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/elsayed-mohamed-603509142/",
+    icon: "🔗"
+  },
+  {
+    label: "Medium",
+    url: "https://medium.com/@elsayed_mohamed",
+    icon: "✍️"
+  },
+  {
+    label: "Hugging Face",
+    url: "https://huggingface.co/sayedM",
+    icon: "🤗"
+  }
 ];
 
-const heroSocialPriority = ["GitHub", "Medium"];
+const heroSocialPriority = ["LinkedIn", "Medium", "Hugging Face"];
 
 const renderMetrics = () => {
   const dl = document.getElementById("metric-cards");
@@ -283,12 +299,14 @@ const renderResearch = () => {
 const renderSocials = () => {
   const container = document.getElementById("social-links");
   if (!container) return;
-  socials.forEach(({ label, url }) => {
+  socials.forEach(({ label, url, icon }) => {
     const link = document.createElement("a");
     link.href = url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = label;
+    link.innerHTML = icon
+      ? `<span class="social-icon" aria-hidden="true">${icon}</span>${label}`
+      : label;
     container.append(link);
   });
 };
@@ -299,12 +317,14 @@ const renderHeroSocials = () => {
   heroSocialPriority
     .map((label) => socials.find((social) => social.label === label))
     .filter(Boolean)
-    .forEach(({ label, url }) => {
+    .forEach(({ label, url, icon }) => {
       const link = document.createElement("a");
       link.href = url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
-      link.textContent = label;
+      link.innerHTML = icon
+        ? `<span class="social-icon" aria-hidden="true">${icon}</span>${label}`
+        : label;
       container.append(link);
     });
 };

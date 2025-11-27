@@ -167,6 +167,17 @@ img {
   transition: border 0.2s ease, color 0.2s ease;
 }
 
+.social-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(96, 165, 250, 0.18);
+  font-size: 1rem;
+}
+
 .hero__socials a:hover {
   border-color: var(--accent);
   color: var(--accent);
@@ -386,6 +397,9 @@ main {
   border-radius: 999px;
   border: 1px solid var(--border);
   font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   transition: border 0.2s ease, color 0.2s ease;
 }
 
