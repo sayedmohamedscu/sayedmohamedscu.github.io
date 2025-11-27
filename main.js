@@ -149,7 +149,7 @@ const experiences = [
   {
     role: "Computer Vision Engineer",
     company: "PassApp",
-    period: "Jun 2021 – Mar 2022",
+    period: "Jun 2021 – Jan 2022",
     summary:
       "Shipped security-focused pipelines for license plate recognition, biometric verification, and national ID OCR.",
     highlights: [
@@ -305,6 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSocials();
   setYear();
 });
+
 
 
 
