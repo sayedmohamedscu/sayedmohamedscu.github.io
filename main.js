@@ -1,39 +1,53 @@
 const metrics = [
+  { value: "6+", label: "years of hands-on experience" },
   { value: "6", label: "companies partnered with" },
   { value: "16", label: "private contracts delivered" },
-  { value: "5+", label: "years of hands-on experience" },
   { value: "8", label: "talks & sessions facilitated" }
 ];
 
 const focusAreas = [
   {
-    title: "Multimodal & Generative AI Platforms",
+    title: "Generative AI, Agents & Voice",
     summary:
-      "Architecting VLM/LLM pipelines (EraBot) with retrieval, fine-tuning, evaluation, and low-latency serving.",
+      "Designing production LLM and agent systems — routed multi-agent architectures, guardrails, retrieval, and near real-time voice interfaces.",
     bullets: [
-      "MedGemma, PaliGemma, LLAVA, Florence-2, CXR-GPT customizations",
-      "CrewAI, LangChain, LlamaIndex agents with FAISS / Pinecone retrieval",
-      "vLLM, SGLang, llama.cpp optimized inference stacks"
+      "Routed multi-agent orchestration with guardrails to prevent drift",
+      "Near real-time voice-to-voice pipelines (streaming ASR + TTS)",
+      "Self-hosted LLM serving on GPU infrastructure (vLLM, SGLang, llama.cpp)",
+      "Agentic RAG with FAISS / Chroma / Pinecone retrieval"
+    ]
+  },
+  {
+    title: "Computer Vision at Scale",
+    summary:
+      "Architecting multi-stage vision pipelines that stay accurate and affordable across hours of continuous high-resolution video.",
+    bullets: [
+      "High-recall detection plus temporal logic, with VLM verification to cut false positives",
+      "Detection & segmentation: YOLO (v3–v11), RT-DETR, SAM/SAM2, nnU-Net",
+      "OCR pipelines for complex documents, including Arabic script",
+      "Cost-aware architecture: the right model at the right stage"
     ]
   },
   {
     title: "Medical Imaging & 3D Pipelines",
     summary:
-      "Building segmentation/classification services for CT, MRI, OCT, and X-ray datasets with SOTA accuracy.",
+      "Building segmentation and report-generation services for CT, MRI, and X-ray with sub-second to low-second latency.",
     bullets: [
-      "3D tumor segmentation APIs for kidney, pancreas, colon",
-      "SAM/SAM2 fine-tuning, nnU-Net, Vision Transformers",
-      "DICOM / NIfTI data orchestration with MONAI, ITK, VTK"
+      "3D multi-organ and tumor segmentation APIs (kidney, pancreas, colon)",
+      "Medical VLM fine-tuning: MedGemma, PaliGemma, CXR-GPT",
+      "DICOM / NIfTI orchestration with MONAI, ITK, VTK",
+      "Optimized inference: 1.2–2s in 3D, ~0.1s in 2D"
     ]
   },
   {
-    title: "Deployment, MLOps & Edge",
+    title: "AI Infrastructure & Deployment",
     summary:
-      "Productionized stacks spanning Jetson edge devices, FastAPI services, Docker/Kubernetes, and multi-cloud.",
+      "On-premise and hybrid AI infrastructure built for security, data residency, and regulated environments.",
     bullets: [
-      "AWS, GCP, Azure, Firebase, S3, GCS",
-      "Streaming inference via WebSockets for Whisper STT",
-      "Model optimization with ONNX, TensorRT, MIG partitioning"
+      "On-prem GPU inference, provisioning, and model serving",
+      "Hybrid cloud / on-prem architectures (AWS, GCP, Azure)",
+      "Docker, Kubernetes, FastAPI, WebSocket streaming services",
+      "Edge & optimization: Jetson, MIG partitioning, ONNX"
     ]
   }
 ];
@@ -60,7 +74,8 @@ const skillGroups = [
       "MedGemma",
       "Qwen",
       "Mixtral",
-      "Phi 2/3/3.5"
+      "Phi 2/3/3.5",
+      "Whisper"
     ]
   },
   {
@@ -90,16 +105,16 @@ const skillGroups = [
     ]
   },
   {
-    title: "Deployment Stack",
+    title: "Deployment & Infrastructure",
     items: [
       "Docker",
       "FastAPI",
       "Kubernetes",
+      "On-prem GPU",
       "Jetson",
-      "Raspberry Pi",
+      "MIG",
       "ONNX",
-      "Firebase",
-      "Vector DBs"
+      "vLLM / SGLang"
     ]
   },
   {
@@ -118,18 +133,34 @@ const skillGroups = [
 
 const experiences = [
   {
-    role: "Senior Artificial Intelligence Engineer",
-    company: "PaxeraHealth · ",
-    period: "Nov 2023 – Present",
+    role: "Senior AI Engineer",
+    company: "Abu Dhabi Executive Office (ADEO)",
+    period: "Mar 2026 – Present",
     summary:
-      "Leading medical imaging AI initiatives, deploying multimodal LLM/VLM solutions, and operationalizing cloud-native inference.",
+      "Delivering strategic government AI programs end-to-end — from problem definition and architecture through model evaluation and on-premise deployment — while guiding a team of 3 engineers on project execution.",
     highlights: [
-      "Built 3D tumor segmentation services with 1.2–2s inference SLA and API integrations.",
-      "Developed SAM-based 2D segmentation services with 0.1s response times.",
-      "Architected EraBot LLM/VLM stack covering RAG, fine-tuning, eval, search, assist flows.",
-      "Fine-tuned and evaluated MedGemma, PaliGemma, LLAVA, Florence-2, CXR-GPT for medical QA.",
-      "Launched FAQ + prompt-engineered assistants spanning OpenAI, Gemini, Qwen, Llama, Mixtral, Phi.",
-      "Served Whisper via real-time WebSocket APIs for clinical speech-to-text."
+      "Led the design and delivery of an end-to-end AI recruitment platform covering the full hiring lifecycle, from CV ingestion to AI-assisted interview analysis and evidence-based candidate comparison.",
+      "Architected a near real-time voice-to-voice screening agent using a routed multi-agent design with guardrails, built on self-hosted LLMs — so candidates are assessed on more than a CV alone.",
+      "Designed a multi-stage computer vision pipeline for emergency-vehicle obstruction detection: high-recall detection plus temporal logic, followed by VLM verification, making hours of continuous 4K video computationally tractable.",
+      "Built an OCR pipeline to automate processing of complex internal documents, enabling downstream AI workflows.",
+      "Benchmark and evaluate candidate models before deployment, weighing accuracy, latency, cost, privacy, and on-premise constraints.",
+      "Participate in building new AI infrastructure aligned with organization-wide AI enablement."
+    ]
+  },
+  {
+    role: "AI Team Lead",
+    company: "PaxeraHealth",
+    period: "Nov 2023 – Feb 2026",
+    summary:
+      "Led the AI team at a medical imaging technology company, owning the AI roadmap, architecture, and production readiness of healthcare-grade products.",
+    highlights: [
+      "Led development of medical VLM and GenAI products through to deployment at leading healthcare institutions.",
+      "Designed and deployed on-premise AI infrastructure for company products and enterprise healthcare customers, meeting security and regulatory requirements.",
+      "Architected the EraBot RAG platform: agentic LLM orchestration, prompt-engineered guardrails, hybrid retrieval, and request gating for grounded clinical responses.",
+      "Fine-tuned a small-parameter LLM as a semantic router, surpassing larger models in routing accuracy while cutting latency and inference cost.",
+      "Scaled chest X-ray QA and radiology report generation by fine-tuning medical VLMs (MedGemma, PaliGemma, CXR-GPT).",
+      "Productionized 2D/3D multi-organ segmentation (1.2–2s in 3D, ~0.1s in 2D) and real-time WebSocket Whisper ASR.",
+      "Mentored AI engineers and set best practices for model development, pipelines, and inference optimization."
     ]
   },
   {
@@ -139,37 +170,61 @@ const experiences = [
     summary:
       "Guided the Tuba AutoML platform, integrating SAM/SAM2, and scaling annotation plus benchmarking systems.",
     highlights: [
-      "Managed and mentored ML teams delivering CV features on tight timelines.",
+      "Managed and mentored the ML team delivering CV features on tight timelines.",
       "Integrated SAM/SAM2 pipelines and auto-labeling services deployable via CUDA + FastAPI.",
-      "Refined AutoML pipelines for classification & detection, boosting reliability.",
+      "Refined AutoML pipelines for classification and detection, boosting reliability.",
       "Researched vector quantization (VQ-VAE) for interpretable classifiers.",
-      "Delivered SCADA automation CV product combining OCR, contrastive learning, YOLO, SAHI."
+      "Delivered a SCADA automation CV product combining OCR, contrastive learning, YOLO, and SAHI."
     ]
   },
   {
     role: "Computer Vision Engineer",
     company: "PassApp",
-    period: "Jun 2022 – Jan 2023",
+    period: "Jun 2022 – Feb 2023",
     summary:
       "Shipped security-focused pipelines for license plate recognition, biometric verification, and national ID OCR.",
     highlights: [
-      "End-to-end license plate recognition deployed on cloud & on-prem.",
+      "End-to-end license plate recognition deployed on cloud and on-prem.",
       "Face matching APIs integrated into client mobile apps.",
       "Egyptian national ID recognition services powering government workflows.",
       "iOS ML deployment for on-device inference."
     ]
   },
   {
-    role: "Machine Learning Engineer",
+    role: "Machine Learning Engineer (Co-Founder)",
     company: "Pxivision",
     period: "Jan 2021 – Sep 2023",
     summary:
-      "Delivered bespoke CV systems for smart access control and document processing for multiple clients.",
+      "Delivered bespoke CV systems for smart access control and document processing across multiple clients.",
     highlights: [
       "Designed license plate, Arabic OCR, and ID parsing solutions with cloud APIs.",
-      "Crafted inspection models using YOLO + Vision Transformers tailored to Arabic text.",
+      "Crafted inspection models using YOLO and Vision Transformers tailored to Arabic text.",
       "Deployed low-latency on-prem and cloud pipelines with monitoring.",
       "Automated data annotation and optimization loops to cut deployment cost."
+    ]
+  },
+  {
+    role: "Computer Vision Engineer",
+    company: "DevisionX",
+    period: "Jul 2020 – Nov 2020",
+    summary:
+      "Helped build and test the early Tuba AutoML pipeline for image classification and object detection.",
+    highlights: [
+      "Participated in building the early version of Tuba (AutoML platform) and the MLOps cycle.",
+      "Tested YOLO v3–v5 and classification model pipelines.",
+      "Built an end-to-end object detection AutoML pipeline with hyperparameter grid search."
+    ]
+  },
+  {
+    role: "Machine Learning Engineer",
+    company: "Digified",
+    period: "Jul 2019 – Nov 2019",
+    summary:
+      "Built state-of-the-art models to read Egyptian ID data for a FinTech and government digital-identity startup.",
+    highlights: [
+      "Built lightweight text de-noising and segmentation autoencoders trained on Arabic datasets.",
+      "Built, trained, and tested text detection models.",
+      "Automated the data annotation process for text segmentation."
     ]
   }
 ];
@@ -179,16 +234,18 @@ const research = [
     title: "Blaze-Wi · WiFi Sensing for Gait Recognition & Intrusion Detection",
     period: "May 2020 – Jul 2021",
     details: [
-      "Built privacy-preserving security stack leveraging WiFi signal variation instead of cameras.",
-      "Achieved 99.3% gait recognition accuracy on Widar 3.0 with custom Blaze-Wi network.",
+      "Built a privacy-preserving sensing stack leveraging WiFi signal variation instead of cameras.",
+      "Achieved 99.3% gait recognition accuracy on Widar 3.0 with a custom Blaze-Wi network.",
       "Integrated intrusion detection, gait recognition, and indoor localization powered by Flutter data collection."
-    ]
+    ],
+    link: "https://drive.google.com/file/d/19ybpBiJmnzYncetyZTorKcRHrvpNDjZr/view",
+    linkLabel: "Read the paper →"
   },
   {
-    title: "Research Assistant · WiFi Sensing ",
+    title: "Research Assistant · WiFi Sensing",
     period: "Mar 2023 – Jul 2023",
     details: [
-      "Explored deep learning techniques for WiFi sensing applications .",
+      "Explored deep learning techniques for WiFi sensing applications.",
       "Investigated multimodal fusion between RF signals and computer vision heuristics."
     ]
   }
@@ -217,7 +274,7 @@ const socials = [
   }
 ];
 
-const heroSocialPriority = ["LinkedIn", "Medium", "Hugging Face"];
+const heroSocialPriority = ["LinkedIn", "GitHub", "Medium", "Hugging Face"];
 
 const renderMetrics = () => {
   const dl = document.getElementById("metric-cards");
@@ -284,13 +341,20 @@ const renderExperience = () => {
 const renderResearch = () => {
   const container = document.getElementById("research-cards");
   if (!container) return;
-  research.forEach(({ title, period, details }) => {
+  research.forEach(({ title, period, details, link, linkLabel }) => {
     const card = document.createElement("article");
     card.className = "card";
     card.innerHTML = `
       <h3>${title}</h3>
       <p class="eyebrow">${period}</p>
       <ul>${details.map((detail) => `<li>${detail}</li>`).join("")}</ul>
+      ${
+        link
+          ? `<a class="card__link" href="${link}" target="_blank" rel="noopener noreferrer">${
+              linkLabel || "Read more →"
+            }</a>`
+          : ""
+      }
     `;
     container.append(card);
   });
@@ -344,9 +408,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSocials();
   setYear();
 });
-
-
-
-
-
-

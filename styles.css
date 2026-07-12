@@ -297,6 +297,19 @@ main {
   color: rgba(248, 250, 252, 0.75);
 }
 
+.card__link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.card__link:hover {
+  border-bottom-color: var(--accent);
+}
+
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
