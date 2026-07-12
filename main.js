@@ -1,7 +1,7 @@
 const metrics = [
   { value: "6+", label: "years of hands-on experience" },
   { value: "6", label: "companies partnered with" },
-  { value: "16", label: "private contracts delivered" },
+  { value: "11", label: "private contracts delivered" },
   { value: "8", label: "talks & sessions facilitated" }
 ];
 
