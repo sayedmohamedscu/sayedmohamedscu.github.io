@@ -1,7 +1,7 @@
 const metrics = [
   { value: "6+", label: "years of hands-on experience" },
   { value: "6", label: "companies partnered with" },
-  { value: "11", label: "private contracts delivered" },
+  { value: "16", label: "private contracts delivered" },
   { value: "8", label: "talks & sessions facilitated" }
 ];
 
@@ -14,7 +14,7 @@ const focusAreas = [
       "Routed multi-agent orchestration with guardrails to prevent drift",
       "Near real-time voice-to-voice pipelines (streaming ASR + TTS)",
       "Self-hosted LLM serving on GPU infrastructure (vLLM, SGLang, llama.cpp)",
-      "Agentic RAG with FAISS / Chroma / Pinecone retrieval"
+      "Agentic RAG and GraphRAG over vector stores and Neo4j knowledge graphs"
     ]
   },
   {
@@ -120,13 +120,24 @@ const skillGroups = [
   {
     title: "Agentic & Retrieval",
     items: [
+      "Agent harnessing",
+      "Tool-calling",
+      "Guardrails",
       "LangChain",
       "LlamaIndex",
       "CrewAI",
+      "RAG pipelines"
+    ]
+  },
+  {
+    title: "Vector & Graph Databases",
+    items: [
       "FAISS",
       "Chroma",
       "Pinecone",
-      "RAG pipelines"
+      "Neo4j",
+      "Knowledge graphs",
+      "GraphRAG"
     ]
   }
 ];
